@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
+/*
+  Paleta clara "atelier" da Desporto Mais, inspirada diretamente na
+  identidade da AMUN (~/Desktop/Projetos Coding/meridian-watches), os
+  mesmos hex exatos já usados na Espalha Ideias (marca do mesmo grupo):
+  verde-pinho (ink) e verde-musgo (accent), invertidos para fundo claro
+  dominante em vez do tema escuro original.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-cream: #f5f2e9;
+  --color-cream-soft: #efe9d9;
+  --color-paper: #fffefa;
+  --color-ink: #16231c;
+  --color-ink-muted: #666b60;
+  --color-border: #e2ddca;
+
+  --color-orange: #b8873c;
+  --color-orange-dark: #96692a;
+  --color-orange-soft: #f1e4c9;
+
+  --color-olive: #24382e;
+  --color-olive-dark: #16231c;
+  --color-olive-soft: #e4e9df;
+
+  --background: var(--color-cream);
+  --foreground: var(--color-ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-cream: var(--color-cream);
+  --color-cream-soft: var(--color-cream-soft);
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-border: var(--color-border);
+  --color-orange: var(--color-orange);
+  --color-orange-dark: var(--color-orange-dark);
+  --color-orange-soft: var(--color-orange-soft);
+  --color-olive: var(--color-olive);
+  --color-olive-dark: var(--color-olive-dark);
+  --color-olive-soft: var(--color-olive-soft);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-cormorant);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--color-olive);
+  color: var(--color-cream);
 }
