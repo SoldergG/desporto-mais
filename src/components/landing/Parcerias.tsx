@@ -35,6 +35,21 @@ export function Parcerias({ parcerias }: { parcerias: Parceria[] }) {
             </RevealOnScroll>
           ))}
         </div>
+
+        <RevealOnScroll>
+          <p className="mt-8 text-sm text-ink-muted">
+            A vigilância aquática e assistência a banhistas é assegurada pela{" "}
+            <a
+              href="https://salvamais.pt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-olive underline underline-offset-2 hover:text-olive-dark"
+            >
+              Salva Mais
+            </a>
+            , agora com site próprio.
+          </p>
+        </RevealOnScroll>
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { List, X } from "@phosphor-icons/react";
-import { Wordmark } from "./LogoMark";
 
 const NAV_LINKS = [
   { label: "Quem somos", href: "#quem-somos" },
@@ -19,8 +19,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-cream/95 backdrop-blur">
       <div className="mx-auto flex h-[4.5rem] max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#top">
-          <Wordmark className="font-display text-lg tracking-[0.2em] text-ink sm:text-xl" />
+        <a href="#top" aria-label="Desporto Mais — início">
+          <Image
+            src="/desporto-mais-logo.png"
+            alt="Desporto Mais"
+            width={376}
+            height={134}
+            priority
+            className="h-12 w-auto sm:h-14"
+          />
         </a>
 
         <nav className="hidden items-center gap-9 lg:flex">
@@ -43,24 +50,24 @@ export function Header() {
           </a>
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="flex items-center gap-4 sm:gap-6">
           <a
             href="#pedido-contacto"
-            className="inline-flex h-11 items-center bg-orange px-6 text-[13px] font-medium uppercase tracking-[0.12em] text-ink transition-colors hover:bg-orange-dark hover:text-cream"
+            className="hidden h-11 items-center bg-orange px-6 text-[13px] font-medium uppercase tracking-[0.12em] text-ink transition-colors hover:bg-orange-dark hover:text-cream lg:inline-flex"
           >
             Pedido de contacto
           </a>
-        </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-          className="flex h-10 w-10 items-center justify-center text-ink lg:hidden"
-        >
-          {open ? <X size={22} weight="light" /> : <List size={22} weight="light" />}
-        </button>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            className="flex h-10 w-10 items-center justify-center text-ink lg:hidden"
+          >
+            {open ? <X size={22} weight="light" /> : <List size={22} weight="light" />}
+          </button>
+        </div>
       </div>
 
       {open && (

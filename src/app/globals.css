@@ -1,27 +1,30 @@
 @import "tailwindcss";
 
 /*
-  Paleta clara "atelier" da Desporto Mais, inspirada diretamente na
-  identidade da AMUN (~/Desktop/Projetos Coding/meridian-watches), os
-  mesmos hex exatos já usados na Espalha Ideias (marca do mesmo grupo):
-  verde-pinho (ink) e verde-musgo (accent), invertidos para fundo claro
-  dominante em vez do tema escuro original.
+  Paleta "azul piscina" da Desporto Mais, derivada do próprio logótipo
+  (public/desporto-mais-logo.png): teal #20BEC6 e laranja #F1592A.
+  O fundo dominante é um azul-piscina claro e o ink é azul-petróleo.
+
+  Os nomes dos tokens (cream/olive/orange) mantêm-se por compatibilidade
+  com as classes já usadas nos componentes — só os valores mudaram.
 */
 :root {
-  --color-cream: #f5f2e9;
-  --color-cream-soft: #efe9d9;
-  --color-paper: #fffefa;
-  --color-ink: #16231c;
-  --color-ink-muted: #666b60;
-  --color-border: #e2ddca;
+  --color-cream: #d8f0f4;
+  --color-cream-soft: #c7e8ee;
+  --color-paper: #f4fcfd;
+  --color-ink: #0f3338;
+  --color-ink-muted: #4a6e73;
+  --color-border: #a9dde4;
 
-  --color-orange: #b8873c;
-  --color-orange-dark: #96692a;
-  --color-orange-soft: #f1e4c9;
+  /* Laranja da marca, aclarado o suficiente para o texto ink passar AA. */
+  --color-orange: #f9713f;
+  --color-orange-dark: #d9451a;
+  --color-orange-soft: #fde2d6;
 
-  --color-olive: #24382e;
-  --color-olive-dark: #16231c;
-  --color-olive-soft: #e4e9df;
+  /* Teal da marca, escurecido para servir de tom sólido sobre fundo claro. */
+  --color-olive: #0e6f77;
+  --color-olive-dark: #0a545a;
+  --color-olive-soft: #cdeef2;
 
   --background: var(--color-cream);
   --foreground: var(--color-ink);

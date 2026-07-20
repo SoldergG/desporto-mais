@@ -4,6 +4,7 @@ import { Hero } from "@/components/landing/Hero";
 import { AvisoBanner } from "@/components/landing/AvisoBanner";
 import { QuemSomos } from "@/components/landing/QuemSomos";
 import { Servicos } from "@/components/landing/Servicos";
+import { MontraDesportos } from "@/components/landing/MontraDesportos";
 import { Parcerias } from "@/components/landing/Parcerias";
 import { Contacto } from "@/components/landing/Contacto";
 import { PedidoContactoForm } from "@/components/landing/PedidoContactoForm";
@@ -22,6 +23,7 @@ export default async function Home() {
         <AvisoBanner aviso={siteContent.aviso} />
         <QuemSomos content={siteContent.sobre} />
         <Servicos servicos={siteContent.servicos} />
+        <MontraDesportos />
         <Parcerias parcerias={siteContent.parcerias} />
         <Contacto content={siteContent.contacto} />
         <PedidoContactoForm />

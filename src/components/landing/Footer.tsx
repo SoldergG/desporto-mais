@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { FacebookLogo } from "@phosphor-icons/react/dist/ssr";
-import { Wordmark } from "./LogoMark";
 
 const FOOTER_LINKS = [
   { label: "Quem somos", href: "#quem-somos" },
@@ -13,7 +13,15 @@ export function Footer({ facebookUrl }: { facebookUrl: string }) {
   return (
     <footer className="border-t border-border bg-cream-soft">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-        <Wordmark className="font-display text-base tracking-[0.2em] text-ink" />
+        <a href="#top" aria-label="Desporto Mais — início">
+          <Image
+            src="/desporto-mais-logo.png"
+            alt="Desporto Mais"
+            width={376}
+            height={134}
+            className="h-16 w-auto sm:h-20"
+          />
+        </a>
 
         <nav className="flex flex-wrap items-center gap-6">
           {FOOTER_LINKS.map((link) => (
@@ -40,16 +48,8 @@ export function Footer({ facebookUrl }: { facebookUrl: string }) {
       <div className="border-t border-border px-4 py-5 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs text-ink-muted">
-            © {new Date().getFullYear()} Desporto Mais. Todos os direitos reservados. · Marca do
-            grupo{" "}
-            <a
-              href="https://www.espalhaideias.pt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-ink"
-            >
-              Espalha Ideias
-            </a>
+            © {new Date().getFullYear()} Espalha Ideias. Todos os direitos reservados. site powered
+            by Via Educação
           </p>
         </div>
       </div>
