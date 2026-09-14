@@ -1,6 +1,7 @@
 "use server";
 
 import { supabasePublic } from "@/lib/supabase/public";
+import { notificarPedidoContacto } from "@/lib/contacto/send-message";
 
 export type PedidoContactoState = { error?: string; success?: boolean };
 
@@ -40,6 +41,11 @@ export async function submeterPedidoContactoAction(
   if (error) {
     return { error: "Não foi possível enviar o pedido. Tenta novamente." };
   }
+
+  // Best-effort: o pedido já está gravado acima, por isso uma falha aqui
+  // (chave em falta, Resend indisponível) não deve impedir o sucesso — o
+  // pedido continua visível em /admin/pedidos.
+  await notificarPedidoContacto({ nome, email, localidade, telefone, mensagem });
 
   return { success: true };
 }
