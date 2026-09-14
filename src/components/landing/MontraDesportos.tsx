@@ -16,7 +16,7 @@ const MONTRA: Montra[] = [
   { label: "Atletismo", video: "/desporto-atletismo.mp4" },
   { label: "Futebol", video: "/desporto-futebol.mp4" },
   { label: "Basquetebol", video: "/desporto-basquete.mp4" },
-  { label: "Andebol", image: "/mod-andebol.jpg" },
+  { label: "Andebol", video: "/desporto-andebol.mp4" },
 ];
 
 export function MontraDesportos() {
