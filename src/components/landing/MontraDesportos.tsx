@@ -9,7 +9,7 @@ type Montra = {
 
 const MONTRA: Montra[] = [
   { label: "Natação", video: "/hero-natacao.mp4" },
-  { label: "Hidroginástica", image: "/mod-hidroginastica.jpg" },
+  { label: "Hidroginástica", video: "/desporto-hidroginastica.mp4" },
   { label: "Ginásio", video: "/desporto-ginasio.mp4" },
   { label: "Aulas de grupo", video: "/desporto-aulas-grupo.mp4" },
   { label: "Pilates", video: "/desporto-pilates.mp4" },
