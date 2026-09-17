@@ -30,6 +30,12 @@ export function Contacto({ content }: { content: ContactoContent }) {
               </a>
             </div>
             <div className="flex items-center gap-3">
+              <span className="w-5 shrink-0" aria-hidden="true" />
+              <p className="text-sm text-ink-muted">
+                Horário: 09h00 às 13h00 e 14h00 às 18h00
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
               <Envelope size={20} weight="light" className="shrink-0 text-olive" />
               <a href={`mailto:${content.email}`} className="text-sm text-ink">
                 {content.email}
